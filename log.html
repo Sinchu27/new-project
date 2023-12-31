@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="log.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h2>Login</h2>
+    <form id="loginForm" action="login.php" method="post" onsubmit="return redirectToWelcome()">
+        <label for="username">Username:</label>
+        <input type="text" name="username" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" required><br>
+
+        <input type="submit" value="Login">
+    </form>
+
+    <script>
+        function redirectToWelcome() {
+            // You can add additional validation logic here if needed
+
+            // Redirect to the welcome page after successful login
+            window.location.href = "jit.html";
+
+            // Return false to prevent the form from submitting
+            return false;
+        }
+    </script>
+</body>
+</html>
